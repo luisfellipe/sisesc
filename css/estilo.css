@@ -24,3 +24,7 @@ body{
 ul li a{
 	margin-right: 20px;
 }
+
+li{
+	list-style-type: none;
+}
