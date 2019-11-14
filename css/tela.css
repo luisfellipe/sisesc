@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+.sub{
+	display: none; 
+}
+
+.formulario{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+
+aside[id=menu]{
+	position: relative;
+	width: 250px;
+	float: left;
+	margin-bottom: 20px;
+
+}
+
+article[id=corpo]{
+	position: relative;
+	float: right;
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+
+aside[id=menu] ul li{
+	display: block;
+	margin-bottom: 20px;
+	width: 150px;
+
+}
+aside[id=menu] ul li a{
+text-decoration: none;
+color: white;
+}
+
+div[id=logo]{
+	width: 250px;
+	height: 80px;
+}
+div[id=logo] img{
+	width: 250px;
+	height: 80px;
+}
+div[class=info]{
+	font-size: 16pt;
+}

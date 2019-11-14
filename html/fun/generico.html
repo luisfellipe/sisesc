@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tela do Funcionário</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../../css/colorfont.css">
+		<link rel="stylesheet" type="text/css" href="../../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="../../css/tela.css">
+		<link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../../js/submenus.js"></script>
+	</head>
+	<body>	
+			<header id="cabecalho"  class="navbar navbar-expand-sm bg-light">
+				<div>
+					<img src="#" width="250px" height="100px">
+				</div>
+			</header>
+
+			<aside id="menu">
+				<br>
+				<ul>
+					<li onclick="showMenu('subAlunos')" class="btn btn-primary">Alunos</li>
+						<div class="sub" id="subAlunos">
+							<ul>
+								<li class="btn btn-primary">Cadastrar</li>
+								<li class="btn btn-primary">Consulta/Alterar</li>
+								<li class="btn btn-primary">Boletim</li>
+							</ul>
+						</div>
+					<li class="btn btn-primary">Cursos</li>
+					<li onclick="showMenu('subTurma')" class="btn btn-primary">Turma</li>
+						<div class="sub" id="subTurma">
+							<ul>
+								<li class="btn btn-primary">Diário</li>
+								<li class="btn btn-primary">Notas</li>
+							</ul>
+						</div>
+					<li class="btn btn-primary">Calendário</li>
+					<li class="btn btn-primary">Comunicados</li>			
+				</ul>
+			</aside>
+
+			<article id="corpo" class="container">
+				
+
+			</article>
+
+
+			<footer id="rodape">
+				
+			</footer>
+
+	</body>
+	<script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+</html>

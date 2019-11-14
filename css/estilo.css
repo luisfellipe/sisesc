@@ -1,0 +1,26 @@
+
+div[id=logo]{
+	width: 250px;
+	height: 80px;
+}
+div[id=logo] img{
+	width: 250px;
+	height: 80px;
+}
+div[class="info"] legend{
+	position: relative;
+	margin-left: 50px;
+}
+
+body{
+	background-color: rgba(235, 235, 235);
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+.social-part .fa{
+	padding-right:20px;
+}
+ul li a{
+	margin-right: 20px;
+}
