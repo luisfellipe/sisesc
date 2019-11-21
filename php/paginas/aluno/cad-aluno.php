@@ -43,15 +43,5 @@
 			<footer id="rodape">
 				
 			</footer>
-
-
-			<ul>
-				<li>Cadastro de Alunos</li>
-				<li>- Emissão de Documentos Ex. Histórico</li>
-				<li>- Gerenciamento de Turmas</li>
-				<li>- Calendário Escolar</li>
-				<li>- Lançamentos de notas e presença</li>
-				<li>- Comunicados importantes</li>
-			</ul>
 	</body>
 </html>

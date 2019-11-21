@@ -2,7 +2,7 @@
 			
 
 			<nav class="navbar navbar-expand-sm   navbar-light mt-2">
-				<div  class="navbar-brand" id="logo">
+				<div  class="navbar-brand ml-4" id="logo">
 					<img class="img img-fluid" src="/prototype/img/logo-sisesc.png">
 				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartoggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">

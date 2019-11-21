@@ -18,37 +18,27 @@
 			width: 250px;
 			height: 80px;
 		}
-		div[class="info"] legend{
-			position: relative;
-			margin-left: 50px;
-		}
-		div[id="form-area"]{
-			margin-left: 8em;
-		}
+		
 		input{
 			border: none;
 		}
 
-		input[name=nome]{
-			margin-left: 2.2em;
+		div[id="form-area"]{
+			border-left: 1px solid rgba(0, 0, 0, 0.2);
 		}
-		input[name=idade]{
-			margin-left: 2.5em;
+		
+		div[id="form-area"] form{
+			margin-left: 1em;
 		}
-		input[name=email]{
-			margin-left: 2.5em;
+		/*label das informações do aluno*/
+		div[id="form-area"]  label{
+			font-size:16pt;
+			color: rgba(0, 0, 0, 0.5)
 		}
-		input[name=telefone]{
-			margin-left: 0.6em;
-		}
-		input[name=cpf]{
-			margin-left: 3.3em;
-		}
-		input[name=rg]{
-			margin-left: 4.1em;
-		}
-		input[name=ra]{
-			margin-left: 4.2em;
+		/*dados do aluno*/
+		div[id="form-area"]  span{
+			font-size:14pt;
+			margin-left: 0.5em;
 		}
 		
 	</style>
@@ -58,88 +48,82 @@
 	<?php 
 	include_once("../../include/cabecalho.php");
 	?>	
+
+	<?php
+	$login = $_POST['username'];
+
+	$sql = "SELECT nome,idade,email,telefone,cpf,rg,ra FROM alunos WHERE cpf='$dado' OR ra='$dado'";
+
+	$nome = "Nome do Aluno";
+	$idade = "25";
+	$email ="email@aluno.com";
+	$telefone = "(XX) X XXXX-XXXX";
+	$cpf = "XXX.XXX.XX-XX";
+	$rg = "XXX.XXX.XX";
+	$ra ="XXXXXXXXXXXX";
+	?>
+
 	<div class="container">
 		
-		<div >
-			<aside id="menu" class="container bg-dark rounded">
-				<br>
-				<ul>
-					<li class=" btn btn-primary">Infomações</li>
+		<div class="row">
+			<div class=" col-md-4 float-left" id="space-left">
+				<aside id="menu" class="container bg-dark rounded">
 					<br>
-					<li class="btn btn-primary">Boletim</li>
-					<br>
-					<li class="btn btn-primary">Calendário</li>
-					<br>
-					<li class="btn btn-primary">Grade</li>
-					<br>
-					<li class="btn btn-primary">Histórico</li>
-					<br>
-					<li class="btn btn-warning">Editar
-					</li>
-				</ul>
+					<ul>
+						<li class=" btn btn-primary">Infomações</li>
+						<br>
+						<li class="btn btn-primary">Boletim</li>
+						<br>
+						<li class="btn btn-primary">Calendário</li>
+						<br>
+						<li class="btn btn-primary">Grade</li>
+						<br>
+						<li class="btn btn-primary">Histórico</li>
+						<br>
+						<li>
+							<input class="btn btn-warning w-100" type="button" name="editar" value="Editar" onclick="editar('form-area'):" />
+						</li>
+					</ul>
 
-			</aside>
-		</div>
-		<?php
-		$login = $_POST['username'];
+				</aside>
+			</div>
 
-		$sql = "SELECT nome,idade,email,telefone,cpf,rg,ra FROM alunos WHERE cpf='$dado' OR ra='$dado'";
-		$nome = "Luís Felipe Alves Soares";
-		$idade = "25 anos";
-		$email ="felipealvesoares@gmail.com";
-		$telefone = "(35) 9 9756-7897";
-		$cpf = "131254631";
-		$rg = "54465446";
-		$ra ="46454662";
-		?>
-		<div class="float-left" id="form-area">
-			<form class="" action="">
-				<fieldset>
-					<h2 class="text-primary">Informações Pessoais</h2>
-					<hr>
-					<div  class="form-group info">
-						<label><h4>Nome:</h4> </label>
-						<input class="rounded" type="text" name="nome" size="45" placeholder="<?php echo $nome ?>">
-					</div>
-					
-					<div  class="form-group info">
-						<label><h4>Idade:</h4></label>
-						<input type="text" name="idade" size="4" placeholder="<?php echo $idade ?>"> 
-					</div>
-					
-					<div  class="form-group info">
-						<label><h4>Email:</h4></label>
-						<input type="email" name="email" size="45"> 
-					</div>
-					
-					<div  class="form-group info">
-						<label><h4>Telefone:</h4></label>
-						<input type="text" name="telefone" size="15">  
-					</div>
-
-					<div  class="form-group info">
-						<label ><h4>CPF:</h4> </label>
-						<input type="text" name="cpf" size="15">  
-					</div>
-
-					<div  class="form-group info">
-						<label ><h4>RG:</h4></label>
-						<input type="text" name="rg" size="15">  
-					</div>
-
-					<div  class="form-group info">
-						<label><h4>RA:</h4></label>
-						<input type="text" name="ra" size="15">  
-					</div>
-				</fieldset>
-			</form>
+			<div class="col-md-8 float-left" id="form-area">
+				<form >
+					<fieldset>
+						<h2 class="text-primary">Informações do Aluno</h2>
+						<hr>
+						<label>Nome:</label>
+						<span><?php echo $nome ?></span>
+						<br>
+						<label>Idade:</label>
+						<span><?php echo $idade." anos" ?></span>
+						<br>
+						<label>Email:</label>
+						<span><?php echo $email ?></span>
+						<br>
+						<label>Telefone:</label>
+						<span><?php echo $telefone ?></span> 
+						<br>
+						<label >CPF:</label>
+						<span><?php echo $cpf ?></span>
+						<br>
+						<label >RG:</label>
+						<span><?php echo $rg ?></span> 
+						<br>
+						<label>RA:</label>
+						<span><?php echo $ra ?></span>
+						
+					</fieldset>
+				</form>
+			</div>
 		</div>
 	</div>
 
 	<?php 
-	include_once("./../include/rodape.php");
+	include_once("../../include/rodape.php");
 
-	include_once("./../include/js.php");
+	include_once("../../include/js.php");
 	?>
 
 </body>

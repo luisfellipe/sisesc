@@ -39,9 +39,6 @@
 							<a href="#">Histórico</a>
 						</li>
 						<br>
-						<li class="btn btn-warning">
-							<a href="#">Editar</a>
-						</li>
 					</ul>
 
 				</aside>
