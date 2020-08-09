@@ -9,7 +9,7 @@
 - Lançamentos de notas e presença
 - Comunicados importantes
 <hr>
-### IFSULDEMINAS - Campus Passos MG
+#### IFSULDEMINAS - Campus Passos MG
 **Cuso:** Ciência da Computação
 **Prof:** Vinícius Silva
 **Alunos:** Erik Fonseca e Luís Felipe
